@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+.container {
+    max-width: 720px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 128, 0, 0.2);
+}
+
+
+h1 {
+    color: #006400;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+a {
+    color: #008000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #004d00;
+    text-decoration: underline;
+}
+
+.doh-url,
+.tron-address,
+.ipv4,
+.ipv6,
+.xray-f-doh,
+.doh-f-url,
+.xray-doh {
+    background-color: #d8f3dc;
+    padding: 10px;
+    border-radius: 20px;
+    word-break: break-all;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.doh-url:hover,
+.tron-address:hover,
+.ipv4:hover,
+.xray-doh:hover,
+.ipv6:hover,
+.xray-f-doh:hover,
+.doh-f-url:hover {
+    background-color: #a3d89e;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.made {
+    font-family: monospace;
+    font-size: 15px;
+}

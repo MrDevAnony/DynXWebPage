@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DynX DNS Service</title>
+    <link rel="icon" href="/media/dynx-logo.png" type="image/png">
+    <meta name="description"
+        content="DynX offers fast, secure, and free DNS services including DoH and Xray Core support.">
+    <meta name="keywords"
+        content="DNS, DNS over HTTPS, DoH, Xray Core, DNS security, fast DNS, secure DNS, adblock, adblocker, adblock dns, adblocker dns">
+    <meta property="og:title" content="DynX DNS Service">
+    <meta property="og:description" content="Fast, secure and free DNS with DoH and Xray Core support.">
+    <meta property="og:url" content="https://dns.dynx.pro">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <div class="container">
+        <h1>DynX DNS Service</h1>
+        <p>A fast, secure, and free Adblocker DNS service.</p>
+        <p>Family dns also blocks ads, adult content and activates Safe Search on many platforms.</p>
+        <p>IPv4:</p>
+        <p class="ipv4" onclick="copyText('5.75.207.234')">5.75.207.234</p>
+        <p>IPv6:</p>
+        <p class="ipv6" onclick="copyText('2a01:4f8:1c1b:2691::1')">2a01:4f8:1c1b:2691::1</p>
+        <p>DoH URL:</p>
+        <p class="doh-url" onclick="copyText('https://dns.dynx.pro/dns-query')">https://dns.dynx.pro/dns-query</p>
+        <p>DoH for Xray Core:</p>
+        <p class="xray-doh" onclick="copyText('https+local://dns.dynx.pro/dns-query')">
+            https+local://dns.dynx.pro/dns-query</p>
+        <p>Family DoH URL:</p>
+        <p class="doh-f-url" onclick="copyText('https://dns.dynx.pro/dns-query/family')">
+            https://dns.dynx.pro/dns-query/family</p>
+        <p>Family DoH for Xray Core:</p>
+        <p class="xray-f-doh" onclick="copyText('https+local://dns.dynx.pro/dns-query/family')">
+            https+local://dns.dynx.pro/dns-query/family</p>
+        <p>Tron address for donations:</p>
+        <p class="tron-address" onclick="copyText('TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp')">
+            TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp</p>
+        <p>Monitor page: <a href="https://monitor.dynx.pro/" target="_blank">monitor.dynx.pro</a></p>
+        <p>Telegram: <a href="https://t.me/DevAnony" target="_blank">@DevAnony</a></p>
+        <p class="made"> Made with ❤️ by DevAnony</p>
+    </div>
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+</body>
+
+</html>
