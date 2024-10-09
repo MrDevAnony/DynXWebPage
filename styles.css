@@ -83,6 +83,7 @@ body {
   box-shadow: 0 0 15px rgba(0, 128, 0, 0.2);
   text-align: center;
   color: var(--text-color);
+  margin: 1.2rem 0;
 }
 
 .container .title {
