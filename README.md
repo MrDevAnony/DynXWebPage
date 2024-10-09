@@ -1,1 +1,5 @@
-<h1>Main DynX Website files</h1>
+# DynX DNS Service Website template
+
+![](preview/dark.png)
+
+![](preview/light.png)
