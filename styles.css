@@ -1,84 +1,158 @@
+@charset "urf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  user-select: none;
+  box-sizing: border-box;
+  outline: 0px;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  color-scheme: dark;
+}
+
+:root {
+  --background-color: rgb(62, 224, 137);
+  --container-border-color: transparent;
+  --container-background-color: #fefefe;
+  --title-color: #006400;
+  --text-color: #333;
+  --link-color: #008000;
+  --link-hover-color: #004d00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #101715;
+    --container-border-color: #215951;
+    --container-background-color: rgba(14, 46, 41, 0.6);
+    --title-color: #0c8f0c;
+    --text-color: #eee;
+    --link-color: #54e254;
+    --link-hover-color: #2db52d;
+  }
+
+  .container {
+    box-shadow: none;
+  }
+
+  .details .item .data:hover {
+    background: rgba(124, 145, 128, 0.6)  !important;
+  }
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-    padding: 50px;
-    margin: 0;
+  overflow: hidden auto;
+  position: relative;
+  width: var(--width);
+  min-height: var(--height);
+  font-family: "Poppins", Arial, sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#particles-js .particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 0;
 }
 
 .container {
-    max-width: 720px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 128, 0, 0.2);
+  z-index: 1;
+  width: calc(var(--width) - 36px);
+  max-width: 820px;
+  padding: 22px 20px 20px;
+  border-radius: 6pt;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: var(--container-background-color);
+  border: 2px solid var(--container-border-color);
+  box-shadow: 0 0 15px rgba(0, 128, 0, 0.2);
+  text-align: center;
+  color: var(--text-color);
+  margin: 1.2rem 0;
 }
 
-
-h1 {
-    color: #006400;
-    margin-bottom: 20px;
+.container .title {
+  color: var(--title-color);
+  font-weight: bolder;
+  margin: 14px auto 20px;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
+.container p {
+  font-size: 17px;
+  line-height: 1.6;
 }
 
-a {
-    color: #008000;
-    text-decoration: none;
+.details {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 20px;
 }
 
-a:hover {
-    color: #004d00;
-    text-decoration: underline;
+.details .item {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 5px;
 }
 
-.doh-url,
-.tron-address,
-.ipv4,
-.ipv6,
-.xray-f-doh,
-.doh-f-url,
-.xray-doh {
-    background-color: #d8f3dc;
-    padding: 10px;
-    border-radius: 20px;
-    word-break: break-all;
-    display: inline-block;
-    margin-top: 10px;
-    cursor: pointer;
+.details .item .info {
+  font-weight: bolder
 }
 
-.doh-url:hover,
-.tron-address:hover,
-.ipv4:hover,
-.xray-doh:hover,
-.ipv6:hover,
-.xray-f-doh:hover,
-.doh-f-url:hover {
-    background-color: #a3d89e;
+.details .item .data {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: rgba(216, 243, 220, 0.4);
+  word-break: break-all;
+  display: inline-block;
+  user-select: text;
+  cursor: pointer;
 }
 
-
-@media (max-width: 600px) {
-    body {
-        padding: 20px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    p {
-        font-size: 16px;
-    }
+.details .item .data:hover {
+  background: rgba(192, 255, 202, 0.8);
 }
 
-.made {
-    font-family: monospace;
-    font-size: 15px;
+.link {
+  margin-top: 1.2rem;
+}
+
+.link p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.link a {
+  color: var(--link-color);
+  text-decoration: none;
+  padding-left: 5px;
+}
+
+.link a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 15px;
 }

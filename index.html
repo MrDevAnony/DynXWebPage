@@ -1,58 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>DynX DNS Service</title>
-    <link rel="icon" href="/media/dynx-logo.png" type="image/png">
-    <meta name="description"
-        content="DynX offers fast, secure, and free DNS services including DoH and Xray Core support.">
-    <meta name="keywords"
-        content="DNS, DNS over HTTPS, DoH, Xray Core, DNS security, fast DNS, secure DNS, adblock, adblocker, adblock dns, adblocker dns">
-    <meta property="og:title" content="DynX DNS Service">
-    <meta property="og:description" content="Fast, secure and free DNS with DoH and Xray Core support.">
-    <meta property="og:url" content="https://dns.dynx.pro">
-    <meta property="og:type" content="website">
-</head>
+    <!-- Old versions of IE need this to be in the first response chunk -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-<body>
+    <title> DynX DNS Service </title>
+
+    <meta name="MobileOptimized" content="176">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,initial-scale=0.8"/>
+    <meta name="title" content="DynX DNS Service">
+    <meta name="description" content="DynX offers fast, secure, and free DNS services including DoH and Xray Core support."/>
+    <meta name="keywords" content="DNS, DNS over HTTPS, DoH, Xray Core, DNS security, fast DNS, secure DNS, adblock, adblocker, adblock dns, adblocker dns"/>
+    <meta name="author" content="MrDevAnony"/>
+
+    <meta property="og:site_name" content="MrDevAnony"/>
+    <meta property="og:title" content="DynX DNS Service"/>
+    <meta property="og:url" content="https://dns.dynx.pro"/>
+    <meta property="og:description" content="Fast, secure and free DNS with DoH and Xray Core support."/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+
+    <link rel="canonical" href="https://dns.dynx.pro/"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+  </head>
+  <body id="particles-js" style="--width: 100vw;--height: 100vh;">
+    <!-- <div id="particles-js"></div> -->
     <div class="container">
-        <h1>DynX DNS Service</h1>
-        <p>A fast, secure, and free Adblocker DNS service.</p>
-        <p>Family dns also blocks ads, adult content and activates Safe Search on many platforms.</p>
-        <p>IPv4:</p>
-        <p class="ipv4" onclick="copyText('5.75.207.234')">5.75.207.234</p>
-        <p>IPv6:</p>
-        <p class="ipv6" onclick="copyText('2a01:4f8:1c1b:2691::1')">2a01:4f8:1c1b:2691::1</p>
-        <p>DoH URL:</p>
-        <p class="doh-url" onclick="copyText('https://dns.dynx.pro/dns-query')">https://dns.dynx.pro/dns-query</p>
-        <p>DoH for Xray Core:</p>
-        <p class="xray-doh" onclick="copyText('https+local://dns.dynx.pro/dns-query')">
-            https+local://dns.dynx.pro/dns-query</p>
-        <p>Family DoH URL:</p>
-        <p class="doh-f-url" onclick="copyText('https://dns.dynx.pro/dns-query/family')">
-            https://dns.dynx.pro/dns-query/family</p>
-        <p>Family DoH for Xray Core:</p>
-        <p class="xray-f-doh" onclick="copyText('https+local://dns.dynx.pro/dns-query/family')">
-            https+local://dns.dynx.pro/dns-query/family</p>
-        <p>Tron address for donations:</p>
-        <p class="tron-address" onclick="copyText('TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp')">
-            TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp</p>
+      <h1 class="title">DynX DNS Service</h1>
+      <p>A fast, secure, and free Adblocker DNS service.</p>
+      <p>Family dns also blocks ads, adult content and activates Safe Search on many platforms.</p>
+      
+      <div class="details">
+        <p class="item">
+          <span class="info">IPv4:</span>
+          <span class="data" onclick="copyToClipboard('5.75.207.234')">5.75.207.234</span>
+        </p>
+        <p class="item">
+          <span class="info">IPv6:</span>
+          <span class="data" onclick="copyToClipboard('2a01:4f8:1c1b:2691::1')">2a01:4f8:1c1b:2691::1</span>
+        </p>
+        <p class="item">
+          <span class="info">DoH URL:</span>
+          <span class="data" onclick="copyToClipboard('https://dns.dynx.pro/dns-query')">https://dns.dynx.pro/dns-query</span>
+        </p>
+        <p class="item">
+          <span class="info">DoH for Xray Core:</span>
+          <span class="data" onclick="copyToClipboard('https+local://dns.dynx.pro/dns-query')">https+local://dns.dynx.pro/dns-query</span>
+        </p>
+        <p class="item">
+          <span class="info">Family DoH URL:</span>
+          <span class="data" onclick="copyToClipboard('https://dns.dynx.pro/dns-query/family')">https://dns.dynx.pro/dns-query/family</span>
+        </p>
+        <p class="item">
+          <span class="info">Family DoH for Xray Core:</span>
+          <span class="data" onclick="copyToClipboard('https+local://dns.dynx.pro/dns-query/family')">https+local://dns.dynx.pro/dns-query/family</span>
+        </p>
+        <p class="item">
+          <span class="info">Tron address for donations:</span>
+          <span class="data" onclick="copyToClipboard('TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp')">TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp</span>
+        </p>
+      </div>
+
+      <div class="link">
         <p>Monitor page: <a href="https://monitor.dynx.pro/" target="_blank">monitor.dynx.pro</a></p>
         <p>Telegram: <a href="https://t.me/DevAnony" target="_blank">@DevAnony</a></p>
-        <p class="made"> Made with ❤️ by DevAnony</p>
+      </div>
+      <p class="copyright"> Made with ❤️ by DevAnony</p>
     </div>
+    <script src="particles.min.js"></script>
     <script>
-        function copyText(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Copied to clipboard');
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
-        }
-    </script>
-</body>
+// set the body to full width and height
+const set_screen_size = () => {
+  document.body.style.setProperty("--height", `${innerHeight}px`);
+  document.body.style.setProperty("--width", `${innerWidth}px`);
+}
+document.addEventListener("DOMContentLoaded", set_screen_size);
+document.addEventListener("resize", set_screen_size);
+function copyToClipboard(text) {
+  var success = () => {
+    alert('Copied to clipboard');
+  }
 
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text).then(success).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  } else {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+
+    document.body.appendChild(textarea);
+
+    textarea.select();
+    textarea.setSelectionRange(0, text.length);
+    document.execCommand('copy');
+
+    document.body.removeChild(textarea);
+
+    success();
+  }
+}
+
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+    </script>
+  </body>
 </html>
