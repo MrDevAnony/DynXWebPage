@@ -21,9 +21,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Build the project
-        run: sudo npm run build
-
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
