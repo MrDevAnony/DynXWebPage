@@ -22,7 +22,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: sudo npm install
+        run: sudo npm init -y && sudo npm install
 
       - name: Run tests
         run: sudo npm test
