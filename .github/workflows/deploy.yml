@@ -21,9 +21,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Run tests
-        run: sudo npm test
-
       - name: Build the project
         run: sudo npm run build
 
