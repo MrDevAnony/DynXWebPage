@@ -40,7 +40,7 @@ html {
   }
 
   .details .item .data:hover {
-    background: rgba(124, 145, 128, 0.6)  !important;
+    background: rgba(124, 145, 128, 0.6) !important;
   }
 }
 
@@ -155,4 +155,13 @@ body {
   font-family: monospace;
   font-weight: 500;
   font-size: 15px;
+}
+
+#dynx-status {
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(216, 243, 220, 0.4);
+  display: inline-block;
+  padding-bottom: 1px;
+  padding-top: 7px;
 }
