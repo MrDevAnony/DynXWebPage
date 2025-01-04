@@ -177,7 +177,8 @@ body {
   background: #d8f3dc66;
 }
 
-.stat-query, .stat-block {
+.stat-query,
+.stat-block {
   display: flex;
   align-items: center;
   gap: 10px;
