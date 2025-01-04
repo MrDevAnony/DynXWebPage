@@ -20,13 +20,13 @@ html {
   --container-background-color: #fefefe;
   --title-color: #006400;
   --text-color: #333;
-  --link-color: #008000;
+  --link-color: hwb(321 0% 50%);
   --link-hover-color: #004d00;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #101715;
+    --background-color: #082a20;
     --container-border-color: #215951;
     --container-background-color: rgba(14, 46, 41, 0.6);
     --title-color: #0c8f0c;
@@ -157,11 +157,28 @@ body {
   font-size: 15px;
 }
 
-#dynx-status {
+.dynx-status {
   padding: 4px 10px;
   border-radius: 4px;
-  background: rgba(216, 243, 220, 0.4);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background: #d8f3dc66;
   display: inline-block;
   padding-bottom: 1px;
   padding-top: 7px;
+}
+
+.dns-stats {
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #d8f3dc66;
+}
+
+.stat-query, .stat-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
