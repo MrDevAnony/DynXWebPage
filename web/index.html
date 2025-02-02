@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8">
+
+  <!--Old versions of IE need this to be in the first response chunk-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title> DynX DNS Service </title>
+
+  <meta name="MobileOptimized" content="176">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width,initial-scale=0.8" />
+  <meta name="title" content="DynX DNS Service">
+  <meta name="description"
+    content="DynX offers fast, secure, and free DNS services including DoH and Xray Core support." />
+  <meta name="keywords"
+    content="DNS, DNS over HTTPS, DoH, Xray Core, DNS security, fast DNS, secure DNS, adblock, adblocker, adblock dns, adblocker dns" />
+  <meta name="author" content="MrDevAnony" />
+
+  <meta property="og:site_name" content="DynX" />
+  <meta property="og:title" content="DynX DNS Service" />
+  <meta property="og:url" content="https://dns.dynx.pro" />
+  <meta property="og:description" content="Fast, secure and free DNS with DoH and Xray Core support." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+
+  <link rel="canonical" href="https://dns.dynx.pro/" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">DynX DNS Service</h1>
+
+    <p>A fast, secure, and free Adblocker DNS service.</p>
+    <p>Family dns also blocks ads, adult content and activates Safe Search on many platforms.</p>
+
+    <div class="dns-stats">
+      <div class="stat-query">
+        <h4>Total DNS Queried: </h4>
+        <p id="total-queries">Loading...</p>
+      </div>
+      <div class="stat-block">
+        <h4>Total Blocked DNS:</h4>
+        <p id="blocked-queries">Loading...</p>
+      </div>
+    </div>
+
+    <span class="dynx-status">
+      <img src="https://monitor.dynx.pro/api/badge/1/status?upColor=%232db52d" alt="Service Status">
+      <img src="https://monitor.dynx.pro/api/badge/1/uptime?color=%232db52d" alt="Service Uptime">
+      <img src="https://monitor.dynx.pro/api/badge/1/response?color=%232db52d" alt="Response Time">
+    </span>
+
+    <div class="details">
+
+      <p class="item">
+        <span class="info">DoH URL:</span>
+        <span class="data"
+          onclick="copyToClipboard('https://dns.dynx.pro/dns-query')">https://dns.dynx.pro/dns-query</span>
+      </p>
+      <p class="item">
+        <span class="info">DoH for Xray Core:</span>
+        <span class="data"
+          onclick="copyToClipboard('https+local://dns.dynx.pro/dns-query')">https+local://dns.dynx.pro/dns-query</span>
+      </p>
+      <p class="item">
+        <span class="info">Family DoH URL:</span>
+        <span class="data"
+          onclick="copyToClipboard('https://dns.dynx.pro/dns-query/family')">https://dns.dynx.pro/dns-query/family</span>
+      </p>
+      <p class="item">
+        <span class="info">Family DoH for Xray Core:</span>
+        <span class="data"
+          onclick="copyToClipboard('https+local://dns.dynx.pro/dns-query/family')">https+local://dns.dynx.pro/dns-query/family</span>
+      </p>
+      <p class="item">
+        <span class="info">Tron address for donations:</span>
+        <span class="data"
+          onclick="copyToClipboard('TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp')">TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp</span>
+      </p>
+    </div>
+
+    <div class="link">
+      <p>Monitor page: <a href="https://monitor.dynx.pro/" target="_blank">monitor.dynx.pro</a></p>
+      <p>Telegram: <a href="https://t.me/DevAnony" target="_blank">@DevAnony</a></p>
+    </div>
+    <p class="copyright"> Made with ❤️ by DevAnony</p>
+  </div>
+  <script>
+    async function fetchDnsStats() {
+      try {
+        const response = await fetch('https://api.dynx.pro/dns-stats');
+        if (!response.ok) {
+          throw new Error('Failed to fetch stats');
+        }
+        const data = await response.json();
+        document.getElementById('total-queries').textContent = data.num_dns_queries.toLocaleString('en-US');
+        document.getElementById('blocked-queries').textContent = data.num_blocked_filtering.toLocaleString('en-US');
+      } catch (error) {
+        console.error(error);
+        document.getElementById('total-queries').textContent = 'Error';
+        document.getElementById('blocked-queries').textContent = 'Error';
+      }
+    }
+    fetchDnsStats();
+  </script>
+  <script>
+    const set_screen_size = () => {
+      document.body.style.setProperty("--height", `${innerHeight}px`);
+      document.body.style.setProperty("--width", `${innerWidth}px`);
+    }
+    document.addEventListener("DOMContentLoaded", set_screen_size);
+    document.addEventListener("resize", set_screen_size);
+    function copyToClipboard(text) {
+      var success = () => {
+        alert('Copied to clipboard');
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text).then(success).catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+        textarea.setSelectionRange(0, text.length);
+        document.execCommand('copy');
+
+        document.body.removeChild(textarea);
+
+        success();
+      }
+    }
+  </script>
+</body>
+
+</html>
