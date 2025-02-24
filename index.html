@@ -5,7 +5,6 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta charset="utf-8">
 
-  <!--Old versions of IE need this to be in the first response chunk-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
   <title> DynX DNS Service </title>
@@ -22,125 +21,185 @@
 
   <meta property="og:site_name" content="DynX" />
   <meta property="og:title" content="DynX DNS Service" />
-  <meta property="og:url" content="https://dns.dynx.pro" />
+  <meta property="og:url" content="https://www.dynx.pro" />
   <meta property="og:description" content="Fast, secure and free DNS with DoH and Xray Core support." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
 
-  <link rel="canonical" href="https://dns.dynx.pro/" />
+  <link rel="canonical" href="https://www.dynx.pro/" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="stylesheet" type="text/css" href="assets/styles.css" />
 </head>
 
 <body>
-  <div class="container">
-    <h1 class="title">DynX DNS Service</h1>
+  <main class="section">
 
-    <p>A fast, secure, and free Adblocker DNS service.</p>
-    <p>Family dns also blocks ads, adult content and activates Safe Search on many platforms.</p>
+    <div class="content has-text-centered">
+      <h1>DynX DNS Services</h1>
+    </div>
 
-    <div class="dns-stats">
-      <div class="stat-query">
-        <h4>Total DNS Queried: </h4>
-        <p id="total-queries">Loading...</p>
+    <div class="posts">
+
+      <div class="card" id="dnsaddresses">
+        <div class="card-header">
+          <div class="card-header-title"><a href="index.html#dnsaddresses">DNS Resolver Addresses</a></div>
+        </div>
+        <div class="card-content">
+          <p class="content">
+            <strong><u>Adblocker DNS</u></strong> (UDP & TCP)<br />
+            IPv4: <code>195.26.26.23</code><br />
+            IPv6: <code>2a00:c98:2050:a04d:1::400</code><br />
+            Port: <code>53</code><br /><br />
+
+            <strong><u>Adblocker DNS</u></strong> (DNS-over-TLS)<br />
+            Hostname: <code>dns.dynx.pro</code><br />
+            Port: <code>853</code><br /><br />
+
+            <strong><u>Adblocker DNS</u></strong> (DNS-over-HTTPS)<br />
+            Adblock: <code>https://dns.dynx.pro/dns-query</code><br />
+            Adblock & Family: <code>https://dns.dynx.pro/dns-query/family</code><br /><br />
+
+            <strong><u>Adblocker DNS</u></strong> (DNS-over-QUIC)<br />
+            Address: <code>quic://dns.dynx.pro:853</code><br /><br />
+
+            <strong><u>Iran Anti-Sanctions DNS</u></strong> (UDP & TCP)<br />
+            Primary IPv4: <code>5.198.178.208</code><br />
+            Secondary IPv4: <code>188.212.99.160</code><br />
+            Primary IPv6: <code>2a13:5ac0:42::4700</code><br />
+            Secondary IPv6: <code>2a05:9080:0:409::c41f:c148</code><br />
+            Port: <code>53</code><br /><br />
+
+            <strong><u>Iran Anti-Sanctions DNS</u></strong> (DNS-over-TLS)<br />
+            Hostname: <code>anti-ban.dynx.pro</code><br />
+            Port: <code>853</code><br /><br />
+
+            <strong><u>Iran Anti-Sanctions DNS</u></strong> (DNS-over-HTTPS)<br />
+            Address: <code>Not available!</code><br /><br />
+
+            <strong><u>Iran Anti-Sanctions DNS</u></strong> (DNS-over-QUIC)<br />
+            Address: <code>quic://anti-ban.dynx.pro:853</code><br /><br />
+
+            <strong><u>Features</u></strong><br />
+            DNSSEC: <code>On</code> <a href="https://wander.science/projects/dns/dnssec-resolver-test/" target="_blank"
+              rel="noopener" alt="DNSSEC Resolver Test" title="DNSSEC Resolver Test"><img src="assets/checkmark.png"
+                alt="DNSSEC Resolver Test" height="16" width="16" /></a><br />
+            Adblocker: <code>Just Ad blocking</code><br />
+            Adblocker & Family: <code>Ad blocking and Youth protection</code><br />
+            Anti-Sanctions:
+            <code>Bypassing the sanction of <a href="https://github.com/MrDevAnony/DynX-AntiBan-Domains">domains on the list</a> by changing the geolocation for Iranian users</code><br />
+            Privacy: <code>No logging</code><br />
+            Limits: <code>We have no limits (:</code><br />
+            Query log: <code>off</code>
+          </p>
+        </div>
       </div>
-      <div class="stat-block">
-        <h4>Total Blocked DNS:</h4>
-        <p id="blocked-queries">Loading...</p>
+
+      <div class="card" id="clients">
+        <div class="card-header">
+          <div class="card-header-title"><a href="index.html#clients">Clients</a></div>
+        </div>
+        <div class="card-content">
+          <p class="content">
+            <strong><u>Android</u></strong><br />
+            Settings > Network & Internet > Private DNS:<br />
+            <code>dns.dynx.pro</code> | <code>anti-ban.dynx.pro</code><br /><br />
+
+            <strong><u>iOS</u></strong><br />
+          <p>Coming soon...</p><br />
+          How to activate the profile on your device:<br />
+          - Download *dynx*.mobileconfig and "Allow"<br />
+          - Install the configuration profile: Settings > Profile loaded<br />
+          - Confirm the "Network traffic" warning and press "Install"<br />
+          - The last installed profile is automatically active (General > VPN & Network > DNS)<br />
+          - Airplane mode must be switched on and off once to clear the cache<br /><br />
+
+          <strong><u>Firefox</u></strong><br />
+          Settings > Privacy & Security > DNS over HTTPS > Maximum Protection > Custom:<br />
+          <code>https://dns.dynx.pro/dns-query</code> |
+          <code>https://dns.dynx.pro/dns-query/family</code><br /><br />
+
+          <strong><u>Chromium / Google Chrome</u></strong><br />
+          Settings > Privacy and security > Security > Enable Use secure DNS >
+          Custom:<br />
+          <code>https://dns.dynx.pro/dns-query</code> |
+          <code>https://dns.dynx.pro/dns-query/family</code><br /><br />
+
+
+          <strong><u>Microsoft Edge</u></strong><br />
+          Settings > Privacy, search, and services > Use secure DNS to specify how to look up the
+          network address for websites > Choose a service provider > Fill in the
+          Enter a custom provider field:<br />
+          <code>https://dns.dynx.pro/dns-query</code> |
+          <code>https://dns.dynx.pro/dns-query/family</code><br /><br />
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="test">
+        <div class="card-header">
+          <div class="card-header-title"><a href="index.html#test">Test</a></div>
+        </div>
+        <div class="card-content">
+          <p class="content">
+            <strong><u>DNS Leak Test</u></strong><br />
+
+            - Adblocker test: <a href="https://tracksong.github.io/tools/adblock" target="_blank"
+              rel="noopener">d3ward</a><br />
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="blocklist">
+        <div class="card-header">
+          <div class="card-header-title"><a href="index.html#blocklist">Blocklist</a></div>
+        </div>
+        <div class="card-content">
+          <p class="content">
+            Check which domains are on the blocklist.<br />
+            <script src="assets/bundle.js"></script>
+            <script src="assets/checker.js"></script>
+          <form id="dnsquery">
+            <div class="field has-addons">
+              <label class="label" for="qname"><u>Domain Check</u> (Is a domain blocked with DynX?)</label>
+            </div>
+            <div class="field has-addons">
+              <div class="control is-expanded">
+                <input type="text" class="input" id="qname" placeholder="ads.google.com">
+              </div>
+              <div class="control">
+                <button type="submit hidden" class="button is-primary" id="query">Check</button>
+              </div>
+            </div>
+          </form>
+          <code id="response"></code>
+
+          <div class="subtitle is-size-7 is-pulled-right">
+            powered by <a href="https://github.com/AdguardTeam/AdGuardHome" target="_blank">AdGuard Home</a>
+          </div>
+          </p>
+        </div>
       </div>
     </div>
 
-    <span class="dynx-status">
-      <img src="https://monitor.dynx.pro/api/badge/1/status?upColor=%232db52d" alt="Service Status">
-      <img src="https://monitor.dynx.pro/api/badge/1/uptime?color=%232db52d" alt="Service Uptime">
-      <img src="https://monitor.dynx.pro/api/badge/1/response?color=%232db52d" alt="Response Time">
-    </span>
-
-    <div class="details">
-
-      <p class="item">
-        <span class="info">DoH URL:</span>
-        <span class="data"
-          onclick="copyToClipboard('https://dns.dynx.pro/dns-query')">https://dns.dynx.pro/dns-query</span>
-      </p>
-      <p class="item">
-        <span class="info">DoH for Xray Core:</span>
-        <span class="data"
-          onclick="copyToClipboard('https+local://dns.dynx.pro/dns-query')">https+local://dns.dynx.pro/dns-query</span>
-      </p>
-      <p class="item">
-        <span class="info">Family DoH URL:</span>
-        <span class="data"
-          onclick="copyToClipboard('https://dns.dynx.pro/dns-query/family')">https://dns.dynx.pro/dns-query/family</span>
-      </p>
-      <p class="item">
-        <span class="info">Family DoH for Xray Core:</span>
-        <span class="data"
-          onclick="copyToClipboard('https+local://dns.dynx.pro/dns-query/family')">https+local://dns.dynx.pro/dns-query/family</span>
-      </p>
-      <p class="item">
-        <span class="info">Tron address for donations:</span>
-        <span class="data"
-          onclick="copyToClipboard('TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp')">TPw9F3LyJMg3tu12UecaZVrAhswYnZR1Wp</span>
-      </p>
+    <br />
+    <div class="has-text-centered">
+      <a href="https://checker.dynx.pro" target="_blank" rel="noopener">Checker</a> |
+      <a href="https://monitor.dynx.pro/status/dynx" target="_blank" rel="noopener">Monitor Page</a>
     </div>
 
-    <div class="link">
-      <p>Monitor page: <a href="https://monitor.dynx.pro/" target="_blank">monitor.dynx.pro</a></p>
-      <p>Telegram: <a href="https://t.me/DevAnony" target="_blank">@DevAnony</a></p>
+    <br />
+    <br />
+    <div class="has-text-centered"><img src="assets/heart.png" /><br />Sponsored by
+      <a href="https://webdade.com" target="_blank" rel="noopener">WebDade</a>.
     </div>
-    <p class="copyright"> Made with ❤️ by DevAnony</p>
+  </main>
+
+  <footer class="footer has-text-centered">
+    <p><strong>no tracking | no logging | no advertising | no limit</strong></p>
+    DynX proudly created by <a href="https://t.me/DevAnony" target="_blank" rel="noopener">DevAnony</a>
+  </footer>
+
   </div>
-  <script>
-    async function fetchDnsStats() {
-      try {
-        const response = await fetch('https://api.dynx.pro/dns-stats');
-        if (!response.ok) {
-          throw new Error('Failed to fetch stats');
-        }
-        const data = await response.json();
-        document.getElementById('total-queries').textContent = data.num_dns_queries.toLocaleString('en-US');
-        document.getElementById('blocked-queries').textContent = data.num_blocked_filtering.toLocaleString('en-US');
-      } catch (error) {
-        console.error(error);
-        document.getElementById('total-queries').textContent = 'Error';
-        document.getElementById('blocked-queries').textContent = 'Error';
-      }
-    }
-    fetchDnsStats();
-  </script>
-  <script>
-    const set_screen_size = () => {
-      document.body.style.setProperty("--height", `${innerHeight}px`);
-      document.body.style.setProperty("--width", `${innerWidth}px`);
-    }
-    document.addEventListener("DOMContentLoaded", set_screen_size);
-    document.addEventListener("resize", set_screen_size);
-    function copyToClipboard(text) {
-      var success = () => {
-        alert('Copied to clipboard');
-      }
-
-      if (navigator.clipboard && window.isSecureContext) {
-        return navigator.clipboard.writeText(text).then(success).catch(err => {
-          console.error('Failed to copy text: ', err);
-        });
-      } else {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-
-        document.body.appendChild(textarea);
-
-        textarea.select();
-        textarea.setSelectionRange(0, text.length);
-        document.execCommand('copy');
-
-        document.body.removeChild(textarea);
-
-        success();
-      }
-    }
-  </script>
 </body>
 
 </html>
