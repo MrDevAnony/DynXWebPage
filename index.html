@@ -1,1 +1,183 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><title>DynX DNS Service</title><meta name="MobileOptimized" content="176"><meta name="HandheldFriendly" content="True"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="title" content="DynX DNS Service"><meta name="description" content="DynX offers fast, secure, and free DNS services including DoH and Xray Core support."><meta name="keywords" content="DNS, DNS over HTTPS, DoH, Xray Core, DNS security, fast DNS, secure DNS, adblock, adblocker, adblock dns, adblocker dns"><meta name="author" content="MrDevAnony"><meta property="og:title" content="DynX DNS Service"><meta property="og:description" content="Fast, secure and free DNS with DoH and Xray Core support."><meta property="og:site_name" content="DynX"><meta property="og:url" content="https://www.dynx.pro"><link rel="canonical" href="https://www.dynx.pro/"><link rel="icon" type="image/x-icon" href="assets/favicon.ico"><link rel="stylesheet" type="text/css" href="assets/styles.css"></head><body><main class="section"><div class="content has-text-centered"><h1>DynX DNS Services</h1></div><div class="posts"><div class="card" id="Statistics"><div class="card-header"><div class="card-header-title"><a href="index.html#Statistics">Statistics (24H)</a></div></div><div class="card-content"><p class="content"><strong><u>Adblocker stats</u></strong><br>Total DNS Queries: <code class="has-text-success" id="adblock-total-queries">Loading...</code><br>Blocked Queries: <code id="adblock-blocked-queries">Loading...</code><br><strong><u>Primary AntiBan stats</u></strong><br>Total DNS Queries: <code class="has-text-success" id="antiban-primary-queries">Loading...</code><br><strong><u>Secondary AntiBan stats</u></strong><br>Total DNS Queries: <code class="has-text-success" id="antiban-secondary-queries">Loading...</code><br></p></div></div><div class="card" id="dnsaddresses"><div class="card-header"><div class="card-header-title"><a href="index.html#dnsaddresses">DNS Resolver Addresses</a></div></div><div class="card-content"><p class="content"><strong><u>Adblocker DNS</u></strong> (UDP & TCP)<br>IPv4: <code>195.26.26.23</code><br>IPv6: <code>2a00:c98:2050:a04d:1::400</code><br>Port: <code>53</code><br><br><strong><u>Adblocker DNS</u></strong> (DNS-over-TLS)<br>Hostname: <code>dns.dynx.pro</code><br>Port: <code>853</code><br><br><strong><u>Adblocker DNS</u></strong> (DNS-over-HTTPS)<br>Adblock: <code>https://dns.dynx.pro/dns-query</code><br>Adblock & Family: <code>https://dns.dynx.pro/dns-query/family</code><br><br><strong><u>Adblocker DNS</u></strong> (DNS-over-QUIC)<br>Address: <code>quic://dns.dynx.pro:853</code><br><br><strong><u>Iran Anti-Sanctions DNS</u></strong> (UDP & TCP)<br>Primary IPv4: <code>5.198.178.208</code><br>Secondary IPv4: <code>188.212.99.160</code><br>Primary IPv6: <code>2a13:5ac0:42::4700</code><br>Secondary IPv6: <code>2a05:9080:0:409::c41f:c148</code><br>Port: <code>53</code><br><br><strong><u>Iran Anti-Sanctions DNS</u></strong> (DNS-over-TLS)<br>Hostname: <code>anti-ban.dynx.pro</code><br>Port: <code>853</code><br><br><strong><u>Iran Anti-Sanctions DNS</u></strong> (DNS-over-HTTPS)<br>Address: <code>Not available!</code><br><br><strong><u>Iran Anti-Sanctions DNS</u></strong> (DNS-over-QUIC)<br>Address: <code>quic://anti-ban.dynx.pro:853</code><br><br><strong><u>Features</u></strong><br>DNSSEC: <code><u><a href="https://wander.science/projects/dns/dnssec-resolver-test/" target="_blank" rel="noopener">On</a></u></code><br>Adblocker: <code>Just Ad blocking</code><br>Adblocker & Family: <code>Ad & porn blocking with safe search</code><br>Anti-Sanctions: <code>Bypassing the sanction of <a href="https://github.com/MrDevAnony/DynX-AntiBan-Domains" target="_blank" rel="noopener"><u>domains on the list</u></a> by changing the geolocation for Iranian users</code><br>Privacy: <code>No logging</code><br>Limits: <code>We have no limits (:</code><br>Query log: <code>off</code></p></div></div><div class="card" id="clients"><div class="card-header"><div class="card-header-title"><a href="index.html#clients">Clients</a></div></div><div class="card-content"><p class="content"><strong><u>Android</u></strong><br>Settings > Network & Internet > Private DNS:<br><code>dns.dynx.pro</code> | <code>anti-ban.dynx.pro</code><br><br><strong><u>iOS</u></strong><br>Coming soon...<br>How to activate the profile on your device:<br>- Download *dynx*.mobileconfig and "Allow"<br>- Install the configuration profile: Settings > Profile loaded<br>- Confirm the "Network traffic" warning and press "Install"<br>- The last installed profile is automatically active (General > VPN & Network > DNS)<br>- Airplane mode must be switched on and off once to clear the cache<br><br><strong><u>Firefox</u></strong><br>Settings > Privacy & Security > DNS over HTTPS > Maximum Protection > Custom:<br><code>https://dns.dynx.pro/dns-query</code> | <code>https://dns.dynx.pro/dns-query/family</code><br><br><strong><u>Chromium / Google Chrome</u></strong><br>Settings > Privacy and security > Security > Enable Use secure DNS > Custom:<br><code>https://dns.dynx.pro/dns-query</code> | <code>https://dns.dynx.pro/dns-query/family</code><br><br><strong><u>Microsoft Edge</u></strong><br>Settings > Privacy, search, and services > Use secure DNS to specify how to look up the network address for websites > Choose a service provider > Fill in the Enter a custom provider field:<br><code>https://dns.dynx.pro/dns-query</code> | <code>https://dns.dynx.pro/dns-query/family</code><br><br><strong><u>Raw xray core & marzban & marzneshin</u></strong><br>Here is an example for DoH:<br><pre id="json-output"></pre><br>Instead of DoH, you can also use other DynX protocols in Xray.<br>Check out the <a href="https://xtls.github.io/en/config/dns.html#dnsserverobject" target="_blank" rel="noopener"><u>Xray document</u></a></p></div></div><br><div class="has-text-centered"><a href="https://checker.dynx.pro" target="_blank" rel="noopener"><u>Checker</u></a> | <a href="https://monitor.dynx.pro/status/dynx" target="_blank" rel="noopener"><u>Monitor Page</u></a></div><br><br><div class="has-text-centered"><img src="assets/heart.png" alt="heart" width="50px" height="50px"><br>Sponsored by <a href="https://my.webdade.com/aff.php?aff=330" target="_blank" rel="noopener"><u>WebDade</u></a>.</div></div></main><footer class="footer has-text-centered"><p><strong>no advertising | no limit</strong></p>DynX proudly created by <a href="https://t.me/DevAnony" target="_blank" rel="noopener"><strong>DevAnony</strong></a><br>Join the <a href="https://t.me/DynXdns" target="_blank" rel="noopener">DynX Telegram channel</a> for updates</footer><script async src="assets/api.js"></script><script async src="assets/json.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>DynX DNS Service</title>
+        <meta name="MobileOptimized" content="176">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="title" content="DynX DNS Service">
+        <meta name="description"
+            content="DynX offers fast, secure, and free DNS services including DoH and Xray Core support.">
+        <meta name="keywords"
+            content="DNS, DNS over HTTPS, DoH, Xray Core, DNS security, fast DNS, secure DNS, adblock, adblocker, adblock dns, adblocker dns">
+        <meta name="author" content="MrDevAnony">
+        <meta property="og:title" content="DynX DNS Service">
+        <meta property="og:description"
+            content="Fast, secure and free DNS with DoH and Xray Core support.">
+        <meta property="og:site_name" content="DynX">
+        <meta property="og:url" content="https://www.dynx.pro">
+        <link rel="canonical" href="https://www.dynx.pro/">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="assets/styles.css">
+    </head>
+
+    <body>
+        <main class="section">
+            <div class="content has-text-centered">
+                <h1>DynX DNS Services</h1>
+            </div>
+            <div class="posts">
+                <div class="card" id="Statistics">
+                    <div class="card-header">
+                        <div class="card-header-title"><a
+                                href="index.html#Statistics">Statistics
+                                (24H)</a></div>
+                    </div>
+                    <div class="card-content">
+                        <p class="content"><strong><u>Adblocker
+                                    stats</u></strong><br>Total DNS Queries:
+                            <code class="has-text-success"
+                                id="adblock-total-queries">Loading...</code><br>Blocked
+                            Queries: <code
+                                id="adblock-blocked-queries">Loading...</code><br><strong><u>Primary
+                                    AntiBan stats</u></strong><br>Total DNS
+                            Queries: <code class="has-text-success"
+                                id="antiban-primary-queries">Loading...</code><br><strong><u>Secondary
+                                    AntiBan stats</u></strong><br>Total DNS
+                            Queries: <code class="has-text-success"
+                                id="antiban-secondary-queries">Loading...</code><br></p>
+                    </div>
+                </div>
+                <div class="card" id="dnsaddresses">
+                    <div class="card-header">
+                        <div class="card-header-title"><a
+                                href="index.html#dnsaddresses">DNS Resolver
+                                Addresses</a></div>
+                    </div>
+                    <div class="card-content">
+                        <p class="content"><strong><u>Adblocker DNS</u></strong>
+                            (UDP & TCP)<br>IPv4:
+                            <code>195.26.26.23</code><br>IPv6:
+                            <code>2a00:c98:2050:a04d:1::400</code><br>Port:
+                            <code>53</code><br><br><strong><u>Adblocker
+                                    DNS</u></strong> (DNS-over-TLS)<br>Hostname:
+                            <code>dns.dynx.pro</code><br>Port:
+                            <code>853</code><br><br><strong><u>Adblocker
+                                    DNS</u></strong>
+                            (DNS-over-HTTPS)<br>Adblock:
+                            <code>https://dns.dynx.pro/dns-query</code><br>Adblock
+                            & Family:
+                            <code>https://dns.dynx.pro/dns-query/family</code><br><br><strong><u>Adblocker
+                                    DNS</u></strong> (DNS-over-QUIC)<br>Address:
+                            <code>quic://dns.dynx.pro:853</code><br><br><strong><u>Iran
+                                    Anti-Sanctions DNS</u></strong> (UDP &
+                            TCP)<br>Primary IPv4:
+                            <code>5.198.178.208</code><br>Secondary IPv4:
+                            <code>188.212.99.160</code><br>Primary IPv6:
+                            <code>2a13:5ac0:42::4700</code><br>Secondary IPv6:
+                            <code>2a05:9080:0:409::c41f:c148</code><br>Port:
+                            <code>53</code><br><br><strong><u>Iran
+                                    Anti-Sanctions DNS</u></strong>
+                            (DNS-over-TLS)<br>Hostname:
+                            <code>anti-ban.dynx.pro</code><br>Port:
+                            <code>853</code><br><br><strong><u>Iran
+                                    Anti-Sanctions DNS</u></strong>
+                            (DNS-over-HTTPS)<br>Address: <code>Not
+                                available!</code><br><br><strong><u>Iran
+                                    Anti-Sanctions DNS</u></strong>
+                            (DNS-over-QUIC)<br>Address:
+                            <code>quic://anti-ban.dynx.pro:853</code><br><br><strong><u>Features</u></strong><br>DNSSEC:
+                            <code><u><a
+                                        href="https://wander.science/projects/dns/dnssec-resolver-test/"
+                                        target="_blank"
+                                        rel="noopener">On</a></u></code><br>Adblocker:
+                            <code>Just Ad blocking</code><br>Adblocker & Family:
+                            <code>Ad & porn blocking with safe
+                                search</code><br>Anti-Sanctions: <code>Bypassing
+                                the sanction of <a
+                                    href="https://github.com/MrDevAnony/DynX-AntiBan-Domains"
+                                    target="_blank" rel="noopener"><u>domains on
+                                        the list</u></a> by changing the
+                                geolocation for Iranian users</code><br>Privacy:
+                            <code>No logging</code><br>Limits: <code>We have no
+                                limits (:</code><br>Query log:
+                            <code>off</code></p>
+                    </div>
+                </div>
+                <div class="card" id="clients">
+                    <div class="card-header">
+                        <div class="card-header-title"><a
+                                href="index.html#clients">Clients</a></div>
+                    </div>
+                    <div class="card-content">
+                        <p
+                            class="content"><strong><u>Android</u></strong><br>Settings
+                            > Network & Internet > Private
+                            DNS:<br><code>dns.dynx.pro</code> |
+                            <code>anti-ban.dynx.pro</code><br><br><strong><u>iOS</u></strong><br>Coming
+                            soon...<br>How to activate the profile on your
+                            device:<br>- Download *dynx*.mobileconfig and
+                            "Allow"<br>- Install the configuration profile:
+                            Settings > Profile loaded<br>- Confirm the
+                            "Network traffic" warning and press "Install"<br>-
+                            The last installed profile is automatically active
+                            (General > VPN & Network > DNS)<br>- Airplane mode
+                            must be switched on and off once to clear the
+                            cache<br><br><strong><u>Firefox</u></strong><br>Settings
+                            > Privacy & Security > DNS over HTTPS > Maximum
+                            Protection >
+                            Custom:<br><code>https://dns.dynx.pro/dns-query</code>
+                            |
+                            <code>https://dns.dynx.pro/dns-query/family</code><br><br><strong><u>Chromium
+                                    / Google Chrome</u></strong><br>Settings >
+                            Privacy and security > Security > Enable Use secure
+                            DNS >
+                            Custom:<br><code>https://dns.dynx.pro/dns-query</code>
+                            |
+                            <code>https://dns.dynx.pro/dns-query/family</code><br><br><strong><u>Microsoft
+                                    Edge</u></strong><br>Settings > Privacy,
+                            search, and services > Use secure DNS to specify how
+                            to look up the network address for websites > Choose
+                            a service provider > Fill in the Enter a custom
+                            provider
+                            field:<br><code>https://dns.dynx.pro/dns-query</code>
+                            |
+                            <code>https://dns.dynx.pro/dns-query/family</code><br><br><strong><u>Raw
+                                    xray core & marzban &
+                                    marzneshin</u></strong><br>Here is an
+                            example for DoH:<br>
+                            <pre id="json-output"></pre><br>Instead of DoH, you
+                            can also use other DynX protocols in Xray.<br>Check
+                            out the <a
+                                href="https://xtls.github.io/en/config/dns.html#dnsserverobject"
+                                target="_blank" rel="noopener"><u>Xray
+                                    document</u></a></p>
+                    </div>
+                </div><br>
+                <div class="has-text-centered"><a
+                        href="https://checker.dynx.pro" target="_blank"
+                        rel="noopener"><u>Checker</u></a> | <a
+                        href="https://monitor.dynx.pro/status/dynx"
+                        target="_blank" rel="noopener"><u>Monitor
+                            Page</u></a></div><br><br>
+                <div class="has-text-centered"><img src="assets/heart.png"
+                        alt="heart" width="50px" height="50px"><br>Sponsored by
+                    <a href="https://my.webdade.com/aff.php?aff=330"
+                        target="_blank" rel="noopener"><u>WebDade</u></a>.</div>
+            </div>
+        </main>
+        <footer class="footer has-text-centered">
+            <p><strong>no advertising | no limit</strong></p>DynX proudly
+            created by <a href="https://t.me/DevAnony" target="_blank"
+                rel="noopener"><strong>DevAnony</strong></a><br>Join the <a
+                href="https://t.me/DynXdns" target="_blank" rel="noopener">DynX
+                Telegram channel</a> for updates
+        </footer>
+        <script async src="assets/api.js"></script>
+        <script async src="assets/json.js"></script>
+    </body>
+
+</html>

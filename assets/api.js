@@ -1,4 +1,4 @@
-async function fetchDnsStats() {
+async function fetchadblockerStats() {
   try {
     const response = await fetch('https://adblocker-api.dynx.pro/dns-stats');
     if (!response.ok) throw new Error('Failed to fetch stats');
@@ -11,18 +11,10 @@ async function fetchDnsStats() {
     document.getElementById('total-queries').textContent = 'Error';
     document.getElementById('blocked-queries').textContent = 'Error';
   }
+}
+fetchDnsStats();
 
-  try {
-    const response = await fetch('https://secondary-antiban-api.dynx.pro/dns-stats');
-    if (!response.ok) throw new Error('Failed to fetch stats');
-
-    const data = await response.json();
-    document.getElementById('antiban-secondary-queries').textContent = data.num_dns_queries.toLocaleString('en-US');
-  } catch (error) {
-    console.error(error);
-    document.getElementById('antiban-secondary-queries').textContent = 'Error';
-  }
-
+async function fetchprimaryantibanStats() {
   try {
     const response = await fetch('https://primary-antiban-api.dynx.pro/dns-stats');
     if (!response.ok) throw new Error('Failed to fetch stats');
@@ -32,6 +24,20 @@ async function fetchDnsStats() {
   } catch (error) {
     console.error(error);
     document.getElementById('antiban-primary-queries').textContent = 'Error';
+  }
+}
+fetchDnsStats();
+
+async function fetchsecondaryantibanStats() {
+  try {
+    const response = await fetch('https://secondary-antiban-api.dynx.pro/dns-stats');
+    if (!response.ok) throw new Error('Failed to fetch stats');
+
+    const data = await response.json();
+    document.getElementById('antiban-secondary-queries').textContent = data.num_dns_queries.toLocaleString('en-US');
+  } catch (error) {
+    console.error(error);
+    document.getElementById('antiban-secondary-queries').textContent = 'Error';
   }
 }
 fetchDnsStats();
