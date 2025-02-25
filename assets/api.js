@@ -1,4 +1,4 @@
-async function fetchadblockerStats() {
+async function fetchDnsStats() {
   try {
     const response = await fetch('https://adblocker-api.dynx.pro/dns-stats');
     if (!response.ok) throw new Error('Failed to fetch stats');
@@ -8,36 +8,19 @@ async function fetchadblockerStats() {
     document.getElementById('adblock-blocked-queries').textContent = data.num_blocked_filtering.toLocaleString('en-US');
   } catch (error) {
     console.error(error);
-    document.getElementById('total-queries').textContent = 'Error';
-    document.getElementById('blocked-queries').textContent = 'Error';
+    document.getElementById('adblock-total-queries').textContent = 'Error';
+    document.getElementById('adblock-blocked-queries').textContent = 'Error';
   }
-}
-fetchDnsStats();
 
-async function fetchprimaryantibanStats() {
   try {
-    const response = await fetch('https://primary-antiban-api.dynx.pro/dns-stats');
+    const response = await fetch('https://antiban-api.dynx.pro/dns-stats');
     if (!response.ok) throw new Error('Failed to fetch stats');
 
     const data = await response.json();
-    document.getElementById('antiban-primary-queries').textContent = data.num_dns_queries.toLocaleString('en-US');
+    document.getElementById('antiban-queries').textContent = data.num_dns_queries.toLocaleString('en-US');
   } catch (error) {
     console.error(error);
-    document.getElementById('antiban-primary-queries').textContent = 'Error';
-  }
-}
-fetchDnsStats();
-
-async function fetchsecondaryantibanStats() {
-  try {
-    const response = await fetch('https://secondary-antiban-api.dynx.pro/dns-stats');
-    if (!response.ok) throw new Error('Failed to fetch stats');
-
-    const data = await response.json();
-    document.getElementById('antiban-secondary-queries').textContent = data.num_dns_queries.toLocaleString('en-US');
-  } catch (error) {
-    console.error(error);
-    document.getElementById('antiban-secondary-queries').textContent = 'Error';
+    document.getElementById('antiban-queries').textContent = 'Error';
   }
 }
 fetchDnsStats();
