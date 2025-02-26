@@ -214,6 +214,97 @@
                         </div>
                     </div>
                 </div>
+                <div class="card" id="clearcache">
+                    <div class="card-header">
+                        <div class="card-header-title">
+                            <a href="index.html#clearcache">Clear DNS Cache</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <strong><u>Windows</u></strong>
+                            <br />
+                            Open CMD and enter <code>ipconfig /flushdns</code>
+                            <br /><br />
+
+                            <strong><u>Linux (systemd-resolved)</u></strong>
+                            <br />
+                            Open Terminal and enter
+                            <code>sudo resolvectl flush-caches</code>
+                            <br />
+                            or
+                            <br />
+                            <code>sudo systemctl restart systemd-resolved</code>
+                            <br /><br />
+
+                            <strong><u>macOS</u></strong>
+                            <br />
+                            Open Terminal and enter
+                            <code>sudo killall -HUP mDNSResponder</code>
+                            <br />
+                            (for older versions use
+                            <code>sudo dscacheutil -flushcache</code>)
+                            <br /><br />
+
+                            <strong><u>Linux (nscd)</u></strong>
+                            <br />
+                            Open Terminal and enter
+                            <code>sudo service nscd restart</code>
+                            <br />
+                            or
+                            <br />
+                            <code>sudo /etc/init.d/nscd restart</code>
+                            <br /><br />
+
+                            <strong><u>Linux (dnsmasq)</u></strong>
+                            <br />
+                            Open Terminal and enter
+                            <code>sudo service dnsmasq restart</code>
+                            <br />
+                            or
+                            <br />
+                            <code>sudo /etc/init.d/dnsmasq restart</code>
+                            <br /><br />
+
+                            <strong><u>Google Chrome</u></strong>
+                            <br />
+                            Type <code>chrome://net-internals/#dns</code> in the
+                            address bar and click <code>Clear host cache</code>
+                            <br /><br />
+
+                            <strong><u>Mozilla Firefox</u></strong>
+                            <br />
+                            Type <code>about:networking#dns</code> in the
+                            address bar and click <code>Clear DNS Cache</code>
+                            <br /><br />
+
+                            <strong><u>Opera</u></strong>
+                            <br />
+                            Type <code>opera://net-internals/#dns</code> in the
+                            address bar and clear the cache <br /><br />
+
+                            <strong><u>Safari</u></strong>
+                            <br />
+                            Use macOS Terminal command (see macOS instructions)
+                            as Safari uses system DNS cache
+                            <br /><br />
+
+                            <strong><u>Android</u></strong>
+                            <br />
+                            Toggle Airplane mode or restart the device
+                            <br /><br />
+
+                            <strong><u>iOS</u></strong>
+                            <br />
+                            Toggle Airplane mode or restart the device
+                            <br /><br />
+
+                            <strong><u>Routers</u></strong>
+                            <br />
+                            Restart the router to clear its DNS cache
+                        </div>
+                    </div>
+                </div>
                 <br />
                 <div class="has-text-centered">
                     <a
