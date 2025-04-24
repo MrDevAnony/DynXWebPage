@@ -60,9 +60,13 @@
                         <strong><u>Adblocker stats</u></strong><br />Total DNS Queries:
                         <code class="has-text-success" id="adblock-total-queries">Loading...</code><br />Blocked
                         Queries:
-                        <code id="adblock-blocked-queries">Loading...</code><br /><strong><u>AntiBan
-                                stats</u></strong><br />Total DNS Queries:
-                        <code class="has-text-success" id="antiban-queries">Loading...</code><br />
+                        <code id="adblock-blocked-queries">Loading...</code><br />
+                        <hr>
+                        <strong><u>AntiBan
+                                stats</u></strong><br />Total Primary DNS Queries:
+                        <code class="has-text-success" id="primary-antiban-queries">Loading...</code><br />
+                        Total Secondary DNS Queries:
+                        <code class="has-text-success" id="secondary-antiban-queries">Loading...</code><br />        
                     </p>
                 </div>
             </div>
@@ -86,9 +90,11 @@
                         <code>https://dns.dynx.pro/dns-query/family</code><br /><br /><strong><u>Adblocker
                                 DNS</u></strong>
                         (DNS-over-QUIC)<br />Address:
-                        <code>quic://dns.dynx.pro:853</code><br /><br /><strong><u>Iran Anti-Sanctions DNS</u></strong>
-                        (UDP & TCP)<br />IPv4: <code>5.198.178.208</code><br />IPv6:
-                        <code>2a13:5ac0:42::4700</code><br />Port: <code>53</code><br /><br /><strong><u>Iran
+                        <code>quic://dns.dynx.pro:853</code>
+                        <hr>
+                        <strong><u>Iran Anti-Sanctions DNS</u></strong>
+                        (UDP & TCP)<br />Primary IPv4: <code>10.70.95.150</code><br />Secondary IPv4:
+                        <code>10.70.95.162</code><br />Port: <code>53</code><br /><br /><strong><u>Iran
                                 Anti-Sanctions DNS</u></strong>
                         (DNS-over-TLS)<br />Hostname:
                         <code>anti-ban.dynx.pro</code><br />Port:
@@ -96,7 +102,9 @@
                         (DNS-over-HTTPS)<br />Address:
                         <code>Not available!</code><br /><br /><strong><u>Iran Anti-Sanctions DNS</u></strong>
                         (DNS-over-QUIC)<br />Address:
-                        <code>quic://anti-ban.dynx.pro:853</code><br /><br /><strong><u>Features</u></strong><br />DNSSEC:
+                        <code>quic://anti-ban.dynx.pro:853</code><br /><br />
+                        <hr>
+                        <strong><u>Features</u></strong><br />DNSSEC:
                         <code><u
                                     ><a
                                         href="https://wander.science/projects/dns/dnssec-resolver-test/"
@@ -115,7 +123,7 @@
                                 >
                                 by changing the geolocation for Iranian
                                 users</code><br />Privacy: <code>No logging</code><br />Limits:
-                        <code>We have no limits (:</code><br />Query log:
+                        <code>We have <b>no limits (:</b></code><br />Query log:
                         <code>off</code>
                     </p>
                 </div>

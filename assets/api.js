@@ -18,15 +18,27 @@ async function fetchDnsStats() {
     }
 
     try {
-        const response = await fetch("https://antiban-api.dynx.pro/dns-stats");
+        const response = await fetch("https://antiban1-api.dynx.pro/dns-stats");
         if (!response.ok) throw new Error("Failed to fetch stats");
 
         const data = await response.json();
-        document.getElementById("antiban-queries").textContent =
+        document.getElementById("primary-antiban-queries").textContent =
             data.num_dns_queries.toLocaleString("en-US");
     } catch (error) {
         console.error(error);
-        document.getElementById("antiban-queries").textContent = "Error";
+        document.getElementById("primary-antiban-queries").textContent = "Error";
+    }
+
+    try {
+        const response = await fetch("https://antiban2-api.dynx.pro/dns-stats");
+        if (!response.ok) throw new Error("Failed to fetch stats");
+
+        const data = await response.json();
+        document.getElementById("secondary-antiban-queries").textContent =
+            data.num_dns_queries.toLocaleString("en-US");
+    } catch (error) {
+        console.error(error);
+        document.getElementById("secondary-antiban-queries").textContent = "Error";
     }
 }
 fetchDnsStats();
