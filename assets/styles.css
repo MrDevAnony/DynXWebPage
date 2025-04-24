@@ -407,7 +407,7 @@ a.has-text-success:hover {
     font-weight: inherit;
 }
 
-.title:not(.is-spaced) + .subtitle {
+.title:not(.is-spaced)+.subtitle {
     margin-top: -1.25rem;
 }
 
@@ -447,7 +447,8 @@ a.has-text-success:hover {
     margin-bottom: 0;
 }
 
-@media print, screen and (min-width: 769px) {
+@media print,
+screen and (min-width: 769px) {
     .field-body {
         display: flex;
         flex-basis: 0;
@@ -459,15 +460,15 @@ a.has-text-success:hover {
         margin-bottom: 0;
     }
 
-    .field-body > .field {
+    .field-body>.field {
         flex-shrink: 1;
     }
 
-    .field-body > .field:not(.is-narrow) {
+    .field-body>.field:not(.is-narrow) {
         flex-grow: 1;
     }
 
-    .field-body > .field:not(:last-child) {
+    .field-body>.field:not(:last-child) {
         margin-right: 0.75rem;
     }
 }
